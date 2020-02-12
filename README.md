@@ -31,17 +31,15 @@ With the people around you, identify other properties. (5 minutes)
 
 As an example:
 
-| Without any special prices defined, the total is the sum of all item prices.
+> Without any special prices defined, the total is the sum of all item prices.
 
 ## Property based tests
 
 From the `fast-check` docs, a property based test can be generalized as:
 
-| for all (x, y, ...)
-
-| such as precondition(x, y, ...) holds
-
-| property(x, y, ...) is true
+> for all (x, y, ...)
+> such that precondition(x, y, ...) holds
+> property(x, y, ...) is true
 
 
 ## Things to look for
