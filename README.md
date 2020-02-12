@@ -1,6 +1,6 @@
 # fast-check-workshop
 
-The purpose of this workshop is to introduce Property Based Testing with Fast-Check. The workshop is largely based off of the Kata on Chapter 6 of [Property-Based Testing with PropEr, Erlang, and Elixir](https://propertesting.com/) by [Fred Hebert](https://ferd.ca/). I highly recommend this book.
+The purpose of this workshop is to introduce Property Based Testing with [Fast-Check](https://github.com/dubzzz/fast-check). The workshop is based off of the Kata on Chapter 6 of [Property-Based Testing with PropEr, Erlang, and Elixir](https://propertesting.com/) by [Fred Hebert](https://ferd.ca/). I highly recommend this book.
 
 # The Kata
 
@@ -27,19 +27,13 @@ When given a list of items, then calculate the total. This project provide a sam
 
 # Step 1: Identify the properties (5 minutes, +10 minute discussion)
 
+> Property based testing frameworks check the truthfulness of properties. A property is a statement like: for all (x, y, ...) such as precondition(x, y, ...) holds property(x, y, ...) is true. - `fast-check` docs
+
 With the people around you, identify other properties. (5 minutes)
 
 As an example:
 
-> Without any special prices defined, the total is the sum of all item prices.
-
-## Property based tests
-
-From the `fast-check` docs, a property based test can be generalized as:
-
-> for all (x, y, ...)
-> such that precondition(x, y, ...) holds
-> property(x, y, ...) is true
+> for all lists of items such that none of the items have special prices the total is the sum of the item prices.
 
 
 ## Things to look for
@@ -60,3 +54,8 @@ Working with the [fast-check basic arbitraries](https://github.com/dubzzz/fast-c
 Using the `total.spec.ts`, test a property that you defined in Step 1. If you finish early, test more properties.
 
 - Try configuring `fast-check` to run through more or fewer examples.
+
+# Step 4: Negative Testing (15 minutes, +10 minute discussion)
+
+- Identify very, very broad properties
+- Apply very, very broad inputs to verify that the system doesn't crash
