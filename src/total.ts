@@ -1,7 +1,7 @@
-import { NonEmptyString, NaturalNumber } from "./generic-models";
+import { NonEmptyString, NaturalNumber, naturalNumber } from "./generic-models";
 
 export function total(listOfItems: Item[]): NaturalNumber {
-  return 0;
+  return naturalNumber(0);
 }
 
 export interface Item {
