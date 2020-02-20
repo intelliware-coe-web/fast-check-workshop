@@ -10,15 +10,15 @@ import { NaturalNumber, naturalNumber, PositiveNumber } from "./generic-models";
   Given ["A", "A", "A"], when the Unit Price is 50 and there is no special price, 
     then the total is 150.
  */
-export function total(listOfItems: Item[], priceMap: PriceMap): NaturalNumber {
+export function total(purchaseList: Item[], priceCatalog: PriceCatalog): NaturalNumber {
   return naturalNumber(0);
 }
 
-export type Item = "A" | "B" | "C" | "D"
-
-export type PriceMap = {
-  [item in Item]: Price;
+export type PriceCatalog = {
+  [item: string]: Price;
 };
+
+export type Item = keyof PriceCatalog;
 
 export type Price = {
   unitPrice: NaturalNumber;

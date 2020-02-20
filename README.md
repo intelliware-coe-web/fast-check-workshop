@@ -13,7 +13,7 @@ Given the following table:
 | C    | 20         |               |
 | D    | 15         |               |
 
-Given a item price catalog, when given a list of items, then calculate the total. This project provides a sample skeleton, but feel free to adjust the code as needed.
+Given a item price catalog, when given a list of items to purchase, then calculate the total. This project provides a sample skeleton, but feel free to adjust the code as needed.
 
 ## Vague Requirements:
 
@@ -29,12 +29,7 @@ Given a item price catalog, when given a list of items, then calculate the total
 
 > Property based testing frameworks check the truthfulness of properties. A property is a statement like: for all (x, y, ...) such as precondition(x, y, ...) holds property(x, y, ...) is true. - `fast-check` docs
 
-With the people around you, identify some properties. (5 minutes)
-
-As an example:
-
-> for all lists of items such that none of the items have special prices the total is the sum of the item prices.
-
+As a group, let's identify the properties of this function:
 
 ## Things to look for
 
@@ -44,6 +39,10 @@ Here are some patterns from the [Quick Theories](https://github.com/quicktheorie
 - The inverse function pattern "There and back again"
 - Idempotence "The more things change, the more they stay the same"
 - Analogous function pattern "Different paths same destination"
+
+As an example:
+
+> for all lists of items such that none of the items have special prices the total is the sum of the item prices.
 
 # Step 2: Creating generators (15 minutes, +10 minute discussion)
 
