@@ -40,10 +40,6 @@ Here are some patterns from the [Quick Theories](https://github.com/quicktheorie
 - Idempotence "The more things change, the more they stay the same"
 - Analogous function pattern "Different paths same destination"
 
-As an example:
-
-> for all lists of items such that none of the items have special prices the total is the sum of the item prices.
-
 # Step 2: Creating generators (15 minutes, +10 minute discussion)
 
 Working with the [fast-check basic arbitraries](https://github.com/dubzzz/fast-check/blob/master/documentation/1-Guides/Arbitraries.md), create a generator to generate a random item.
