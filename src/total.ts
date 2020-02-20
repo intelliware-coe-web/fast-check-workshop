@@ -10,7 +10,7 @@ import { NaturalNumber, naturalNumber, PositiveNumber } from "./generic-models";
   Given ["A", "A", "A"], when the Unit Price is 50 and there is no special price, 
     then the total is 150.
  */
-export function total(purchaseList: Item[], priceCatalog: PriceCatalog): NaturalNumber {
+export function total(priceCatalog: PriceCatalog, purchaseList: Item[]): NaturalNumber {
   return naturalNumber(0);
 }
 
