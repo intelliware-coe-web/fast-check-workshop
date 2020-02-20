@@ -17,13 +17,13 @@ Given a item price catalog, when given a list of items to purchase, then calcula
 
 ## Vague Requirements:
 
-- Item names are unique
-- List of items have no set length
-- List of items are unordered
-- Unit prices are whole numbers
-- All items have a unit price
-- Special prices can be applied multiple times
-- Special prices are optional
+- [ ] Item names are unique
+- [ ] List of items have no set length
+- [ ] List of items are unordered
+- [ ] Unit prices are whole numbers
+- [ ] All items have a unit price
+- [ ] Special prices can be applied multiple times
+- [ ] Special prices are optional
 
 # Step 1: Identify the properties (5 minutes, +10 minute discussion)
 
