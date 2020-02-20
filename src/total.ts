@@ -1,16 +1,31 @@
-import { NonEmptyString, NaturalNumber, naturalNumber } from "./generic-models";
+import { NaturalNumber, naturalNumber, PositiveNumber } from "./generic-models";
 
-export function total(listOfItems: Item[]): NaturalNumber {
+/*
+ Given a list of items, calculates the total price of all the items in the list. Special Prices provide
+ the rebate total for the quantity and can be applied multiple times.
+
+  Given ["A", "A", "A"], when the Special Price for "A" is { rebateQuantity: 3, rebateTotal: 130 },
+    then the total is 130.
+
+  Given ["A", "A", "A"], when the Unit Price is 50 and there is no special price, 
+    then the total is 150.
+ */
+export function total(listOfItems: Item[], priceMap: PriceMap): NaturalNumber {
   return naturalNumber(0);
 }
 
-export interface Item {
-  name: NonEmptyString;
-  price: NaturalNumber;
+export type Item = "A" | "B" | "C" | "D"
+
+export type PriceMap = {
+  [item in Item]: Price;
+};
+
+export type Price = {
+  unitPrice: NaturalNumber;
   specialPrice?: SpecialPrice;
 }
 
-export interface SpecialPrice {
-  rebateQuantity: NaturalNumber;
+export type SpecialPrice = {
+  rebateQuantity: PositiveNumber;
   rebateTotal: NaturalNumber;
 }

@@ -1,21 +1,21 @@
-import { NonEmpty, GreaterEqual, greaterEqualThan, isNotEmpty } from 'taghiro';
-
-export type NonEmptyString = string & NonEmpty;
+import { GreaterEqual, greaterEqualThan } from 'taghiro';
 
 export type NaturalNumber = number & GreaterEqual<0>
-
-export function nonEmptyString(value: string): NonEmptyString {
-  if (isNotEmpty(value)) {
-    return value as NonEmptyString;
-  } else {
-    throw new Error("Value must not be a non-empty string")
-  }
-}
 
 export function naturalNumber(value: number): NaturalNumber {
   if (greaterEqualThan(value, 0)) {
     return value as NaturalNumber;
   } else {
-    throw new Error("Value must be a natural number")
+    throw new Error("Value must be a natural number");
+  }
+}
+
+export type PositiveNumber = number & GreaterEqual<1>
+
+export function positiveNumber(value: number): PositiveNumber {
+  if (greaterEqualThan(value, 1)) {
+    return value as PositiveNumber;
+  } else {
+    throw new Error("Value must be greater than 1");
   }
 }

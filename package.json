@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^13.7.1",
+    "@types/node": "^13.7.4",
     "@types/tape": "^4.2.34",
     "fast-check": "^1.22.2",
     "taghiro": "^0.3.1",

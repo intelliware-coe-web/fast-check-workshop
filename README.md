@@ -13,7 +13,7 @@ Given the following table:
 | C    | 20         |               |
 | D    | 15         |               |
 
-When given a list of items, then calculate the total. This project provide a sample skeleton, but feel free to adjust the code as needed.
+Given a item price catalog, when given a list of items, then calculate the total. This project provides a sample skeleton, but feel free to adjust the code as needed.
 
 ## Vague Requirements:
 
@@ -29,7 +29,7 @@ When given a list of items, then calculate the total. This project provide a sam
 
 > Property based testing frameworks check the truthfulness of properties. A property is a statement like: for all (x, y, ...) such as precondition(x, y, ...) holds property(x, y, ...) is true. - `fast-check` docs
 
-With the people around you, identify other properties. (5 minutes)
+With the people around you, identify some properties. (5 minutes)
 
 As an example:
 
@@ -49,7 +49,7 @@ Here are some patterns from the [Quick Theories](https://github.com/quicktheorie
 
 Working with the [fast-check basic arbitraries](https://github.com/dubzzz/fast-check/blob/master/documentation/1-Guides/Arbitraries.md), create a generator to generate a random item.
 
-# Step 3: Test the property (15 minutes, +10 minute discussion)
+# Step 3: Test the property & implement (15 minutes, +10 minute discussion)
 
 Using the `total.spec.ts`, test a property that you defined in Step 1. If you finish early, test more properties.
 
