@@ -11,7 +11,9 @@ import { NaturalNumber, naturalNumber, PositiveNumber } from "./generic-models";
     then the total is 150.
  */
 export function total(priceCatalog: PriceCatalog, purchaseList: Item[]): NaturalNumber {
-  return naturalNumber(0);
+  return naturalNumber(purchaseList
+    .map(purchase => priceCatalog[purchase].unitPrice)
+    .reduce((a, b) => a + b, 0));
 }
 
 export type PriceCatalog = {
